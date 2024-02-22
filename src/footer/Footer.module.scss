@@ -1,0 +1,36 @@
+@import './src/common/styles/sass/variables';
+@import './src/common/styles/sass/mixins';
+
+.footer {
+    background-color: $bgColor;
+    padding: 50px 0;
+
+    .footerContainer {
+        flex-direction: column;
+        justify-content: flex-start;
+
+        h2 {
+            @include text($fontFamily, 20px, 700, $textColor);
+            text-transform: uppercase;
+            text-align: center;
+            margin: 0;
+            justify-content: center;
+        }
+
+        .linksBlock {
+            @include flex(flex, space-between);
+            width: 280px;
+            background-color: $bgColor;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        p {
+            @include text($primaryFontFamily, 15px, 500, $textColor);
+            margin: 25px 0 0 0;
+        }
+    }
+}
+
+
+

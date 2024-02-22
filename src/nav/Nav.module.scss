@@ -1,0 +1,17 @@
+@import './src/common/styles/sass/variables';
+@import './src/common/styles/sass/mixins';
+
+.nav {
+    @include flex(flex, space-between);
+    width: 350px;
+
+    a {
+        @include text($fontFamily, 17px, 500, $textColor);
+        text-decoration: none;
+
+        &:hover {
+            color: $primaryColor;
+            cursor: pointer;
+        }
+    }
+}

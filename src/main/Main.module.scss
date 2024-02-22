@@ -1,0 +1,88 @@
+@import './src/common/styles/sass/variables';
+@import './src/common/styles/sass/mixins';
+
+.mainBlock {
+    height: 100vh;
+    background-color: $bgColor;
+    position: relative;
+    @media screen and (max-width: 607px){
+        padding: 50px 0;
+    }
+
+    .text {
+        @include text($fontFamily, 40px, 700, $textColor);
+        width: 550px;
+        text-transform: uppercase;
+        @media screen and (max-width: 1207px){
+            width: 430px;
+            font-size: 30px;
+        }
+        @media screen and (max-width: 1054px){
+            width: 330px;
+            font-size: 20px;
+        }
+        @media screen and (max-width: 375px){
+            width: 270px;
+            font-size: 15px;
+        }
+
+
+        h1 {
+            color: $primaryColor;
+            font-size: 50px;
+            margin: 0;
+            @media screen and (max-width: 1207px){
+                font-size: 40px;
+            }
+            @media screen and (max-width: 1054px){
+                font-size: 30px;
+            }
+            @media screen and (max-width: 375px) {
+                font-size: 25px;
+            }
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .color_block {
+        background-color: $primaryColor;
+        width: 500px;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 0% 100%);
+
+        @media screen and (max-width: 867px){
+           display: none;
+        }
+
+    }
+
+    .photo {
+        @include image(cover, center, no-repeat);
+        width: 400px;
+        height: 550px;
+        background-image: url('../assets/image/photo.jpg');
+        border-radius: 6px;
+        position: relative;
+        z-index: 1;
+        box-shadow: 0px 0px 10px #000;
+
+        @media screen and (max-width: 1054px){
+            width: 350px;
+            height: 450px;
+        }
+        @media screen and (max-width: 375px){
+            width: 300px;
+            height: 400px;
+        }
+    }
+}
+
+
+
+
+

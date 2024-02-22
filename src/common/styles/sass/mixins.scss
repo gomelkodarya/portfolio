@@ -1,0 +1,19 @@
+@import 'variables';
+
+@mixin text($fontFamily, $fontSize, $fontWeight, $color) {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  color: $color;
+}
+
+@mixin image($backgroundSize, $backgroundPosition, $backgroundRepeat) {
+  background-size: $backgroundSize;
+  background-position: $backgroundPosition;
+  background-repeat: $backgroundRepeat;
+}
+
+@mixin flex($display, $justifyContent) {
+  display: $display;
+  justify-content: $justifyContent;
+}

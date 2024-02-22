@@ -1,0 +1,20 @@
+@import './src/common/styles/sass/variables';
+@import './src/common/styles/sass/mixins';
+
+.title {
+    @include text($fontFamily, 38px, 700px, $primaryColor);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    h2 {
+        margin: 0;
+    }
+
+    @media screen and (max-width: 768px){
+        font-size: 25px;
+    }
+}
+
+
+
