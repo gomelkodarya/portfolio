@@ -9,7 +9,8 @@ import simulatorMultiplicationTableImage from "../assets/image/simulator-multipl
 import wordpressImage from "../assets/image/wordpress.png";
 import uberImage from "../assets/image/uber.png";
 import pointImage from "../assets/image/point.png";
-import wineImage from "../assets/image/vino.png"
+import wineImage from "../assets/image/vino.png";
+import portfolioImage from "../assets/image/portfolio.png"
 import { useGSAP } from '@gsap/react';
 import { useRef } from 'react';
 import gsap from 'gsap';
@@ -36,6 +37,9 @@ export const Projects = () => {
     }
     const wine = {
         backgroundImage: `url(${wineImage})`
+    }
+    const portfolio = {
+        backgroundImage: `url(${portfolioImage})`
     }
 
     gsap.registerPlugin(useGSAP, ScrollTrigger);
@@ -75,6 +79,13 @@ export const Projects = () => {
                         description={'Stack: React, Redux, TypeScript, REST API, Material UI'}
                         link={'https://todo-xi-beige.vercel.app'}
                         gitHub={'https://github.com/gomelkodarya/todo'}
+                    />
+                    <Project                
+                        style={portfolio}
+                        title={'Portfolio SPA'}
+                        description={'Stack: React, GSAP, EmailJS, SCSS'}
+                        link={'https://portfolio-cyan-tau-36.vercel.app/'}
+                        gitHub={'https://github.com/gomelkodarya/portfolio'}
                     />
                     <Project
                         style={simulatorMultiplicationTable}
