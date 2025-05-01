@@ -2,53 +2,80 @@
 @import './src/common/styles/sass/mixins';
 
 .project {
-    width: 500px;
+    width: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    
 
-    .image {
-        @include flex(flex, center);
-        @include image(cover, center, no-repeat);
-        width: 100%;
-        height: 350px;
-        align-items: center;
+    .imageWrapper {
+        width: 350px;
+        height: 250px;
+        overflow: hidden;
         border-bottom: 6px solid $primaryColor;
         border-radius: 6px;
         position: relative;
-        &::before {
-            position: absolute;
-            content: '';
-            background-color: black;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            opacity: 0.2;
-        }
 
-        .btn {
-            @include text($primaryFontFamily, 15px, 500, $textColor);
-            width: 90px;
-            height: 40px;
-            background-color: $bgSecondColor;
-            border: 2px solid $primaryColor;
-            border-radius: 35px;
-            text-decoration: none;
-            line-height: 34px;
+        .image {
+            @include flex(flex, center);
+            @include image(cover, center, no-repeat);
+            width: 100%;
+            height: 100%;
+            align-items: center;
             position: relative;
-            z-index: 1;
-
+            transition: all 0.3s ease;
+            
+            &::before {
+                position: absolute;
+                content: '';
+                background-color: black;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                opacity: 0.2;
+            }
             &:hover {
-                background-color: $primaryColor;
-                cursor: pointer;
+                transform: scale(1.2);
+                transition: all 0.3s ease;
+                .btn {
+                    visibility: visible;
+                    transition: all 0.3s ease;
+                }
+            }
+
+            .btn {
+                @include text($primaryFontFamily, 15px, 500, $textColor);
+                width: 100px;
+                height: 50px;
+                background-color: $bgSecondColor;
+                border: 2px solid $primaryColor;
+                border-radius: 35px;
+                text-decoration: none;
+                line-height: 34px;
+                position: relative;
+                z-index: 1;
+                transition: all 0.3s ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                visibility: hidden;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    color: $primaryColor;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                }
             }
         }
     }
 
     .project_info {
         padding: 25px 20px 25px 20px;
+        display: flex;
+        flex-direction: column;
 
         .title {
             @include text($fontFamily, 20px, 700, $textColor);
@@ -57,8 +84,15 @@
         }
 
         .description {
-            @include text($primaryFontFamily, 15px, 500, $textColor);
+            @include text($primaryFontFamily, 18px, 500, $textColor);
             line-height: 1.6;
+        }
+        .github {
+            @include text($primaryFontFamily, 18px, 500, $textColor);
+            &:hover {
+                color: $primaryColor;
+                transition: all 0.3s ease;
+            }
         }
     }
 }

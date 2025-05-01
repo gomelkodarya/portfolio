@@ -19,10 +19,10 @@
 
         .linksBlock {
             @include flex(flex, space-between);
-            width: 280px;
             background-color: $bgColor;
             flex-wrap: wrap;
             margin-top: 30px;
+            gap: 50px;
         }
 
         p {

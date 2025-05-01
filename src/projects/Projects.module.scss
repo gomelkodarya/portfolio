@@ -3,21 +3,19 @@
 
 .projectsBlock {
     padding: 50px 0;
-    background-color: $bgColor;
+    background-color: $bgSecondColor;
 
     .projectsContainer {
         flex-direction: column;
         justify-content: flex-start;
 
         .projects {
-            @include flex(flex, space-between);
+            @include flex(flex, center);
             width: 100%;
             flex-wrap: wrap;
-            margin-top: 30px;
+            margin-top: 50px;
             align-items: flex-start;
-            @media screen and (max-width: 1267px) {
-                justify-content: center;
-            }
+            gap: 50px;        
         }
     }
 }

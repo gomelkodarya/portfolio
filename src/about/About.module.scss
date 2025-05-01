@@ -1,0 +1,25 @@
+@import './src/common/styles/sass/variables';
+@import './src/common/styles/sass/mixins';
+
+.contactBlock {
+    background-color: $bgSecondColor;
+    padding: 50px 0;
+
+    .contactContainer {
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .textContainer {
+            margin-top: 50px;
+            .text {
+                @include text($primaryFontFamily, 18px, 500, $textColor);
+                text-align: center;
+                line-height: 1.6; 
+                margin-top: 0;     
+            }  
+        } 
+    }
+}
+
+
+

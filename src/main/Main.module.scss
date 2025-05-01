@@ -5,24 +5,22 @@
     height: 100vh;
     background-color: $bgColor;
     position: relative;
-    @media screen and (max-width: 607px){
-        padding: 50px 0;
+    padding: 100px 0 0px 0;
+    @media screen and (max-width: 825px){
+        height: auto;
+        padding: 150px 0 0px 0;
     }
 
     .text {
         @include text($fontFamily, 40px, 700, $textColor);
-        width: 550px;
         text-transform: uppercase;
         @media screen and (max-width: 1207px){
-            width: 430px;
             font-size: 30px;
         }
         @media screen and (max-width: 1054px){
-            width: 330px;
             font-size: 20px;
         }
         @media screen and (max-width: 375px){
-            width: 270px;
             font-size: 15px;
         }
 
@@ -45,6 +43,10 @@
         p {
             margin: 0;
         }
+        .pretitle {
+            font-size: 20px;
+            text-transform: capitalize;
+        }
     }
 
     .color_block {
@@ -62,22 +64,40 @@
     }
 
     .photo {
-        @include image(cover, center, no-repeat);
         width: 400px;
         height: 550px;
-        background-image: url('../assets/image/photo.jpg');
         border-radius: 6px;
         position: relative;
         z-index: 1;
-        box-shadow: 0px 0px 10px #000;
+            
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 6px;
+            object-fit: cover;
+        }
 
         @media screen and (max-width: 1054px){
             width: 350px;
             height: 450px;
         }
+        @media screen and (max-width: 825px){
+            margin-top: 50px;
+        }
         @media screen and (max-width: 375px){
             width: 300px;
             height: 400px;
+        }
+        &:before{
+            content:'';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            border: 2px solid $primaryColor;
+            left: -15px;
+            top: -15px;
+            z-index: -1;
+            border-radius: 6px;
         }
     }
 }

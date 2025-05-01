@@ -2,7 +2,7 @@
 @import './src/common/styles/sass/mixins';
 
 .title {
-    @include text($fontFamily, 38px, 700px, $primaryColor);
+    @include text($fontFamily, 28px, 700px, $primaryColor);
     margin: 0;
     text-transform: uppercase;
     letter-spacing: 2px;

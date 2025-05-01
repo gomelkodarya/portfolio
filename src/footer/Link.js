@@ -3,6 +3,6 @@ import style from "./Link.module.scss";
 
 export const Link = (props) => {
     return (
-        <div style={props.style} className={style.link}></div>
+        <a href={props.link} className={style.link} target="_blank"><img src={props.img} alt="link"/></a>
     )
 }

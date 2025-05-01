@@ -3,7 +3,7 @@
 
 .skillsBlock {
     padding: 50px 0;
-    background-color: $bgSecondColor;
+    background-color: $bgColor;
 
     .skillsContainer {
         flex-direction: column;
@@ -11,9 +11,10 @@
 
         .skills {
             @include flex(flex, space-between);
+            gap: 20px 10px;
             width: 100%;
             flex-wrap: wrap;
-            margin-top: 30px;
+            margin-top: 50px;
             align-items: flex-start;
             @media screen and (max-width: 770px){
                 justify-content: center;
